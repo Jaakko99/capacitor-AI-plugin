@@ -13,5 +13,5 @@ export class ExampleWeb extends WebPlugin implements ExamplePlugin {
   Promise<{value: string )}> {
     console.log("Color hex", color);
     return color;
- 
+   */
 }
