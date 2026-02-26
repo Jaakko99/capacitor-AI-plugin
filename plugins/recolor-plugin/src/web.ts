@@ -7,4 +7,11 @@ export class ExampleWeb extends WebPlugin implements ExamplePlugin {
     console.log('ECHO', options);
     return options;
   }
+
+ /* This will use some sort own method, to connect to mobile service
+  async response(color: {value: string}):
+  Promise<{value: string )}> {
+    console.log("Color hex", color);
+    return color;
+ 
 }
