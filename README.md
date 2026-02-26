@@ -1,4 +1,4 @@
-# capacitor Recolor Plugin
+# Capacitor Recolor Plugin
 A capacitor plugin for detecting color and change it with use of AI.
 On-device object segmentation and recoloring for Capacitor apps. Change the color of any object in an image using native AI (ML Kit/CoreML) for maximum speed and privacy.
 
