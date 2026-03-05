@@ -19,4 +19,14 @@ public class ExamplePlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @Pluginmethod
+    fun recolorImage(call: PluginCall)
+        val imagePath = call.getString("path")
+        val colorHex = call-getString("color")
+                // Logic to proces image with ml kit
+    // Retunr result
+    val ret = JSObject()
+    ret.put("status","success")
+    call.resolve
 }
