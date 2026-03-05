@@ -1,4 +1,20 @@
 
+package com.recolor.plugin
+
+import android.graphics.*
+import android.net.Uri
+import android.util.Log
+import com.getcapacitor.JSObject
+import com.getcapacitor.Plugin
+import com.getcapacitor.PluginCall
+import com.getcapacitor.PluginMethod
+import com.getcapacitor.annotation.CapacitorPlugin
+import com.google.mlkit.vision.common.InputImage
+import com.google.mlkit.vision.segmentation.subject.SubjectSegmentation
+import com.google.mlkit.vision.segmentation.subject.SubjectSegmenterOptions
+import java.io.File
+import java.io.FileOutputStream
+
 // A helper function to convert the file URI to a Bitmap
 private fun getBitmapFromUri(context: Context, imagePath: String): Bitmap? {
     try {
