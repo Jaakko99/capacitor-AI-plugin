@@ -6,7 +6,7 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "Example")
+@CapacitorPlugin(name = "AIRecolor")
 public class ExamplePlugin extends Plugin {
 
     private Example implementation = new Example();
@@ -20,7 +20,7 @@ public class ExamplePlugin extends Plugin {
         call.resolve(ret);
     }
 
-    @Pluginmethod
+    @PluginMethod
     fun recolorImage(call: PluginCall)
         val imagePath = call.getString("path")
         val colorHex = call-getString("color")

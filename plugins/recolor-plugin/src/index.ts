@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { ExamplePlugin } from './definitions';
+import type { AIRecolor } from './definitions';
 
-const Example = registerPlugin<ExamplePlugin>('Example', {
+const pluginRes = registerPlugin<AIRecolor>('pluginRes', {
   web: () => import('./web').then((m) => new m.ExampleWeb()),
 });
 
 export * from './definitions';
-export { Example };
+export { pluginRes };
