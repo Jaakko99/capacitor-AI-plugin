@@ -21,10 +21,11 @@ public class ExamplePlugin extends Plugin {
     }
 
     @PluginMethod
-    fun recolorImage(call: PluginCall)
-        val imagePath = call.getString("path")
-        val colorHex = call-getString("color")
-                // Logic to proces image with ml kit
+    fun recolorImage(call:PluginCall)
+
+    val imagePath = call.getString("path")
+    val colorHex = call - getString("color")
+    // Logic to proces image with ml kit
     // Retunr result
     val ret = JSObject()
     ret.put("status","success")
