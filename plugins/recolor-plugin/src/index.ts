@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
-
 import type { AIRecolor } from './definitions';
+import { AIRecolorWeb } from './web'
 
-const AIRecolorPlugin  = registerPlugin<AIRecolor>('pluginRes', {
-  web: () => import('./web').then((m) => new m.AIRecolorWeb()),
+const AIRecolorPlugin = registerPlugin<AIRecolor>('AIRecolor', {
+  web: () => new AIRecolorWeb(), // fallback for web
 });
 
 export * from './definitions';
-export { AIRecolorPlugin  };
+export { AIRecolorPlugin };

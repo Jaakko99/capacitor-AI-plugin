@@ -11,23 +11,28 @@ public class ExamplePlugin extends Plugin {
 
     private Example implementation = new Example();
 
+    /**
+     * Echo method for testing
+     */
     @PluginMethod
     public void echo(PluginCall call) {
         String value = call.getString("value");
-
         JSObject ret = new JSObject();
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
 
+    /**
+     * Recolors an image given a path and color
+     */
     @PluginMethod
-    fun recolorImage(call:PluginCall)
+    public void recolorImage(PluginCall call) {
+        String imagePath = call.getString("path");
+        String colorHex = call.getString("color");
 
-    val imagePath = call.getString("path")
-    val colorHex = call - getString("color")
-    // Logic to proces image with ml kit
-    // Retunr result
-    val ret = JSObject()
-    ret.put("status","success")
-    call.resolve
+        // TODO: implement ML Kit recolor logic
+        JSObject ret = new JSObject();
+        ret.put("recoloredImagePath", imagePath); // temporary placeholder
+        call.resolve(ret);
+    }
 }
